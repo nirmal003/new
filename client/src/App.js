@@ -6,8 +6,8 @@ function App() {
   const [password, setPassword] = useState("");
 
   const handleOnSubmit = (e) => {
-    console.log("hi");
     e.preventDefault();
+
     if (!name || !password) {
       document.getElementById("nameErr").innerText = "Please fill the userName";
       document.getElementById("passErr").innerText = "Please fill the Password";
