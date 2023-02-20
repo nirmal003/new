@@ -26,7 +26,7 @@ function App() {
         <input
           type="text"
           name="name"
-          placeholder="userName"
+          placeholder="Username"
           onChange={handleOnChange}
         />
         <span id="nameErr"></span>
