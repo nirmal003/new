@@ -4,6 +4,7 @@ import "./App.css";
 function App() {
   const [name, setName] = useState("");
   const [password, setPassword] = useState("");
+  const [light, setLight] = useState(false);
 
   const handleOnSubmit = (e) => {
     e.preventDefault();
@@ -15,6 +16,10 @@ function App() {
     console.log(name, password);
   };
 
+  // const handleChange = () => {
+  //   setLight(!light);
+  // };
+
   const handleOnChange = (e) => {
     setName(e.target.value);
     setPassword(e.target.value);
@@ -22,6 +27,16 @@ function App() {
 
   return (
     <div className="App">
+      <div className={light ? "light" : "dark"}>
+        <label htmlFor="theme">
+          <input
+            type="checkbox"
+            //  onChange={handleChange}
+            onChange={() => setLight(!light)}
+          />
+          Theme
+        </label>
+      </div>
       <form onSubmit={handleOnSubmit}>
         <input
           type="text"
