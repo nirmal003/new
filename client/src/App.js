@@ -37,6 +37,7 @@ function App() {
           Theme
         </label>
       </div>
+      <div className={`App ${light ? "light" : "dark"}`}>Hello</div>
       <form onSubmit={handleOnSubmit}>
         <input
           type="text"
