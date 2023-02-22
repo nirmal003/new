@@ -16,14 +16,9 @@ function App() {
     console.log(name, password);
   };
 
-  // const handleChange = () => {
+  // const handleOnChange = () => {
   //   setLight(!light);
   // };
-
-  const handleOnChange = (e) => {
-    setName(e.target.value);
-    setPassword(e.target.value);
-  };
 
   return (
     <div className="App">
@@ -31,7 +26,7 @@ function App() {
         <label htmlFor="theme">
           <input
             type="checkbox"
-            //  onChange={handleChange}
+            //  onChange={handleOnChange}
             onChange={() => setLight(!light)}
           />
           Theme
@@ -41,16 +36,14 @@ function App() {
       <form onSubmit={handleOnSubmit}>
         <input
           type="text"
-          name="name"
           placeholder="Username"
-          onChange={handleOnChange}
+          onChange={(e) => setName(e.target.value)}
         />
         <span id="nameErr"></span>
         <input
           type="password"
-          name="password"
           placeholder="Password"
-          onChange={handleOnChange}
+          onChange={(e) => setPassword(e.target.value)}
         />
         <span id="passErr"></span>
         <button>submit</button>
