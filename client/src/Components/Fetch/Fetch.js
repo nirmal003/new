@@ -25,7 +25,7 @@ function Fetch() {
 
   return (
     <>
-      <button onClick={() => setShow(!show)}>Show</button>
+      <button onClick={() => setShow(!show)}>Show Pop-up</button>
       {show && (
         <div className="overlay2" onClick={() => setShow(false)}>
           <div className="model2">
