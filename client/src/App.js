@@ -54,10 +54,11 @@ function App() {
           <button>submit</button>
         </form>
       </div>
-      <button onClick={() => setShow(!show)}>Open Model</button>
-      <Fetch />
-      <Model show={show} close={() => setShow(!show)} />
       <Dropdown />
+      <button onClick={() => setShow(!show)}>Open Model</button>
+      <Model show={show} close={() => setShow(!show)} />
+      <br />
+      <Fetch />
     </>
   );
 }
