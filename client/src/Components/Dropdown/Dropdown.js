@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 
 const countries = [
   { name: "India", value: "IN", cities: ["Delhi", "Mumbai"] },
@@ -8,12 +8,14 @@ const countries = [
 
 function Dropdown() {
   const [index, setIndex] = useState(0);
-  useEffect(() => {}, [index]);
+
+  // useEffect(() => {}, [index]);
+
   return (
     <div>
       <select>
         {countries.map((item, i) => (
-          <option value={item.name} onClick={() => setIndex(i)}>
+          <option value={item.name} onChange={() => setIndex(i)}>
             {item.name}
           </option>
         ))}
