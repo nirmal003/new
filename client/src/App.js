@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./App.css";
+import Fetch from "./Components/Fetch/Fetch";
 
 function App() {
   const [name, setName] = useState("");
@@ -21,34 +22,37 @@ function App() {
   // };
 
   return (
-    <div className="App">
-      <div className={light ? "light" : "dark"}>
-        <label htmlFor="theme">
+    <>
+      <div className="App">
+        <div className={light ? "light" : "dark"}>
+          <label htmlFor="theme">
+            <input
+              type="checkbox"
+              //  onChange={handleOnChange}
+              onChange={() => setLight(!light)}
+            />
+            Theme
+          </label>
+        </div>
+        <div className={`App ${light ? "light" : "dark"}`}>Hello</div>
+        <form onSubmit={handleOnSubmit}>
           <input
-            type="checkbox"
-            //  onChange={handleOnChange}
-            onChange={() => setLight(!light)}
+            type="text"
+            placeholder="Username"
+            onChange={(e) => setName(e.target.value)}
           />
-          Theme
-        </label>
+          <span id="nameErr"></span>
+          <input
+            type="password"
+            placeholder="Password"
+            onChange={(e) => setPassword(e.target.value)}
+          />
+          <span id="passErr"></span>
+          <button>submit</button>
+        </form>
       </div>
-      <div className={`App ${light ? "light" : "dark"}`}>Hello</div>
-      <form onSubmit={handleOnSubmit}>
-        <input
-          type="text"
-          placeholder="Username"
-          onChange={(e) => setName(e.target.value)}
-        />
-        <span id="nameErr"></span>
-        <input
-          type="password"
-          placeholder="Password"
-          onChange={(e) => setPassword(e.target.value)}
-        />
-        <span id="passErr"></span>
-        <button>submit</button>
-      </form>
-    </div>
+      <Fetch />
+    </>
   );
 }
 
