@@ -17,6 +17,7 @@ function Dropdown() {
           <option value={i}>{item.name}</option>
         ))}
       </select>
+
       <select>
         {countries[index].cities.map((val) => (
           <option value={val}>{val}</option>
