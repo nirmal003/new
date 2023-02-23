@@ -28,14 +28,13 @@ function App() {
     <>
       <div className="App">
         <div className={light ? "light" : "dark"}>
-          <label htmlFor="theme">
-            <input
-              type="checkbox"
-              //  onChange={handleOnChange}
-              onChange={() => setLight(!light)}
-            />
-            Theme
-          </label>
+          <input
+            id="theme"
+            type="checkbox"
+            //  onChange={handleOnChange}
+            onChange={() => setLight(!light)}
+          />
+          <label htmlFor="theme">Theme</label>
         </div>
         <div className={`App ${light ? "light" : "dark"}`}>Hello</div>
         <form onSubmit={handleOnSubmit}>
