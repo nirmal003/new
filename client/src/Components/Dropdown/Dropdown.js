@@ -8,16 +8,13 @@ const countries = [
 
 function Dropdown() {
   const [index, setIndex] = useState(0);
-
-  // useEffect(() => {}, [index]);
+  console.log(index);
 
   return (
     <div>
-      <select>
+      <select onChange={(e) => setIndex(e.target.value)}>
         {countries.map((item, i) => (
-          <option value={item.name} onChange={() => setIndex(i)}>
-            {item.name}
-          </option>
+          <option value={i}>{item.name}</option>
         ))}
       </select>
       <select>
