@@ -4,6 +4,7 @@ import React, { useEffect, useState } from "react";
 function Fetch() {
   const [user, setUser] = useState([]);
   const [users, setUsers] = useState([]);
+  const [show, setShow] = useState(false);
 
   useEffect(() => {
     (async () => {
@@ -23,6 +24,8 @@ function Fetch() {
 
   return (
     <>
+      <button onClick={() => setShow(!show)}>Show</button>
+      {show && <h2>Pop-up View</h2>}
       <div>
         {user &&
           user.map((user) => (
