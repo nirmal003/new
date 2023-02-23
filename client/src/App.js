@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./App.css";
+import Dropdown from "./Components/Dropdown/Dropdown";
 import Fetch from "./Components/Fetch/Fetch";
 import Model from "./Components/Model/Model";
 
@@ -56,6 +57,7 @@ function App() {
       <button onClick={() => setShow(!show)}>Open Model</button>
       <Fetch />
       <Model show={show} close={() => setShow(!show)} />
+      <Dropdown />
     </>
   );
 }

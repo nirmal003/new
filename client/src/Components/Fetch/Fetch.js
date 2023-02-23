@@ -1,5 +1,6 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
+import "./Fetch.css";
 
 function Fetch() {
   const [user, setUser] = useState([]);
@@ -25,7 +26,14 @@ function Fetch() {
   return (
     <>
       <button onClick={() => setShow(!show)}>Show</button>
-      {show && <h2>Pop-up View</h2>}
+      {show && (
+        <div className="overlay2" onClick={() => setShow(false)}>
+          <div className="model2">
+            <h2>Pop-up View</h2>
+            <button onClick={() => setShow(false)}>Close</button>
+          </div>
+        </div>
+      )}
       <div>
         {user &&
           user.map((user) => (
