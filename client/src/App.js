@@ -1,11 +1,13 @@
 import React, { useState } from "react";
 import "./App.css";
 import Fetch from "./Components/Fetch/Fetch";
+import Model from "./Components/Model/Model";
 
 function App() {
   const [name, setName] = useState("");
   const [password, setPassword] = useState("");
   const [light, setLight] = useState(false);
+  const [show, setShow] = useState(false);
 
   const handleOnSubmit = (e) => {
     e.preventDefault();
@@ -51,7 +53,9 @@ function App() {
           <button>submit</button>
         </form>
       </div>
+      <button onClick={() => setShow(!show)}>Open Model</button>
       <Fetch />
+      <Model show={show} close={() => setShow(!show)} />
     </>
   );
 }
