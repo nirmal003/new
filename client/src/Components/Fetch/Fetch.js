@@ -36,7 +36,7 @@ function Fetch() {
       )}
       <div>
         {user &&
-          user.map((user) => (
+          user.slice(0, 2).map((user) => (
             <div key={user._id}>
               <h1>{user.name}</h1>
             </div>
@@ -44,7 +44,7 @@ function Fetch() {
       </div>
       <div>
         {users &&
-          users.map((user) => (
+          users.slice(0, 1).map((user) => (
             <div key={user.id}>
               <h1>{user.name}</h1>
             </div>

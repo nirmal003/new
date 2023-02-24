@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./App.css";
 import Dropdown from "./Components/Dropdown/Dropdown";
 import Fetch from "./Components/Fetch/Fetch";
+import Form from "./Components/Form/Form";
 import Model from "./Components/Model/Model";
 
 function App() {
@@ -28,12 +29,7 @@ function App() {
     <>
       <div className="App">
         <div className={light ? "light" : "dark"}>
-          <input
-            id="theme"
-            type="checkbox"
-            //  onChange={handleOnChange}
-            onChange={() => setLight(!light)}
-          />
+          <input id="theme" type="checkbox" onChange={() => setLight(!light)} />
           <label htmlFor="theme">Theme</label>
         </div>
         <div className={`App ${light ? "light" : "dark"}`}>Hello</div>
@@ -57,6 +53,7 @@ function App() {
       <button onClick={() => setShow(!show)}>Open Model</button>
       <Model show={show} close={() => setShow(!show)} />
       <Fetch />
+      <Form />
     </>
   );
 }
