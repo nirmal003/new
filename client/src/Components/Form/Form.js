@@ -36,6 +36,35 @@ function Form() {
         <input type="text" name="firstName" onChange={getData} />
         <input type="text" name="lastName" onChange={getData} />
         <input type="password" name="password" onChange={getData} />
+        <select name="occupation" onChange={getData}>
+          <option value="student">Student</option>
+          <option value="employee">Employee</option>
+          <option value="other">Other</option>
+        </select>
+        <input
+          type="radio"
+          name="gender"
+          value="male"
+          id="male"
+          onChange={getData}
+        />
+        <label htmlFor="male">Male</label>
+        <input
+          type="radio"
+          name="gender"
+          value="female"
+          id="female"
+          onChange={getData}
+        />
+        <label htmlFor="female">Female</label>
+        <input
+          type="radio"
+          name="gender"
+          value="other"
+          id="other"
+          onChange={getData}
+        />
+        <label htmlFor="other">Other</label>
         <input
           id="html"
           type="checkbox"
