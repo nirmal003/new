@@ -1,9 +1,9 @@
 import React from "react";
 
 function AutoText() {
-  let index = 0;
-  let data = "Here we learning JavaScript ";
   function text() {
+    let data = "Here we will learning JavaScript ";
+    let index = 0;
     setInterval(() => {
       document.getElementById("text").innerText = data.slice(0, index);
       index++;
