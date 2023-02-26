@@ -26,8 +26,8 @@ function App() {
   // };
 
   function text() {
+    let data = "Here we learning JavaScript ";
     let index = 0;
-    let data = "Here we learning JavaScript";
     setInterval(() => {
       document.getElementById("text").innerText = data.slice(0, index);
       index++;
