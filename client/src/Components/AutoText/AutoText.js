@@ -4,12 +4,11 @@ function AutoText() {
   function text() {
     let data = "Here we will learning JavaScript ";
     let index = 0;
-    setInterval(() => {
+    return setInterval(() => {
       document.getElementById("text").innerText = data.slice(0, index);
       index++;
       if (index > data.length - 1) index = 0;
     }, 160);
-    return data;
   }
 
   let res = text();
