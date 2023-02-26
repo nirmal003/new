@@ -33,10 +33,9 @@ function App() {
           <input id="theme" type="checkbox" onChange={() => setLight(!light)} />
           <label htmlFor="theme">Theme</label>
         </div>
-        {/* <div id="text" className={`App ${light ? "light" : "dark"}`}>
-          {res}
-        </div> */}
+
         <AutoText />
+
         <form onSubmit={handleOnSubmit}>
           <input
             type="text"
