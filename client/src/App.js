@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./App.css";
+import AutoText from "./Components/AutoText/AutoText";
 import Dropdown from "./Components/Dropdown/Dropdown";
 import Fetch from "./Components/Fetch/Fetch";
 import Form from "./Components/Form/Form";
@@ -25,18 +26,6 @@ function App() {
   //   setLight(!light);
   // };
 
-  function text() {
-    let data = "Here we learning JavaScript ";
-    let index = 0;
-    setInterval(() => {
-      document.getElementById("text").innerText = data.slice(0, index);
-      index++;
-      if (index > data.length - 1) index = 0;
-    }, 150);
-    return data;
-  }
-  let res = text();
-
   return (
     <>
       <div className="App">
@@ -44,9 +33,10 @@ function App() {
           <input id="theme" type="checkbox" onChange={() => setLight(!light)} />
           <label htmlFor="theme">Theme</label>
         </div>
-        <div id="text" className={`App ${light ? "light" : "dark"}`}>
+        {/* <div id="text" className={`App ${light ? "light" : "dark"}`}>
           {res}
-        </div>
+        </div> */}
+        <AutoText />
         <form onSubmit={handleOnSubmit}>
           <input
             type="text"
