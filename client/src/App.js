@@ -25,6 +25,18 @@ function App() {
   //   setLight(!light);
   // };
 
+  function text() {
+    let index = 0;
+    let data = "Here we learning JavaScript";
+    setInterval(() => {
+      document.getElementById("text").innerText = data.slice(0, index);
+      index++;
+      if (index > data.length - 1) index = 0;
+    }, 150);
+    return data;
+  }
+  let res = text();
+
   return (
     <>
       <div className="App">
@@ -32,7 +44,9 @@ function App() {
           <input id="theme" type="checkbox" onChange={() => setLight(!light)} />
           <label htmlFor="theme">Theme</label>
         </div>
-        <div className={`App ${light ? "light" : "dark"}`}>Hello</div>
+        <div id="text" className={`App ${light ? "light" : "dark"}`}>
+          {res}
+        </div>
         <form onSubmit={handleOnSubmit}>
           <input
             type="text"
