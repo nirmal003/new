@@ -1,4 +1,4 @@
-import React from "react";
+import React, { memo } from "react";
 
 function AutoText() {
   function text() {
@@ -20,4 +20,4 @@ function AutoText() {
   );
 }
 
-export default React.memo(AutoText);
+export default memo(AutoText);
