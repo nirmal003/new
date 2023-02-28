@@ -5,6 +5,7 @@ import Dropdown from "./Components/Dropdown/Dropdown";
 import Fetch from "./Components/Fetch/Fetch";
 import Form from "./Components/Form/Form";
 import Model from "./Components/Model/Model";
+import Pagination from "./Components/Pagination/Pagination";
 
 function App() {
   const [name, setName] = useState("");
@@ -62,6 +63,8 @@ function App() {
       <Fetch />
 
       <Form />
+
+      <Pagination />
     </>
   );
 }

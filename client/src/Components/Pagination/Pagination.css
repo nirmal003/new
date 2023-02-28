@@ -1,0 +1,21 @@
+.pagination {
+  padding: 10px;
+  margin: 15px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.pagination > span {
+  padding: 10px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  border: 1px solid gray;
+}
+
+.selected {
+  background-color: #ccc;
+}
+
+.disable {
+  opacity: 0;
+}
