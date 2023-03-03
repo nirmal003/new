@@ -1,0 +1,28 @@
+div p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #aaa;
+  height: 100px;
+  width: 100px;
+}
+.p1 {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+.p2 {
+  position: fixed;
+  top: 0;
+  right: 0;
+}
+.p3 {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+.p4 {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+}

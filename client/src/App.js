@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./App.css";
 import AutoText from "./Components/AutoText/AutoText";
+// import Demo from "./Components/Demo/Demo";
 import Dropdown from "./Components/Dropdown/Dropdown";
 import Fetch from "./Components/Fetch/Fetch";
 import Form from "./Components/Form/Form";
@@ -65,6 +66,8 @@ function App() {
       <Form />
 
       <Pagination />
+
+      {/* <Demo /> */}
     </>
   );
 }
