@@ -67,6 +67,8 @@ function App() {
 
       <Pagination />
 
+      {/* <a href="mailto:nirmalraj1025@gmail.com">email</a> */}
+
       {/* <Demo /> */}
     </>
   );
