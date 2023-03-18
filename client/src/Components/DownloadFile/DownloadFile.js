@@ -3,7 +3,6 @@ import nirmal from "../../Assets/Nirmal.pdf";
 
 function DownloadFile() {
   const fileName = "Nirmal Raj.pdf";
-
   const handleDownload = () => {
     const link = document.createElement("a");
     link.href = nirmal;
