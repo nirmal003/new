@@ -1,12 +1,12 @@
 import React from "react";
+import nirmal from "../../Assets/Nirmal.pdf";
 
 function DownloadFile() {
-  const fileUrl = "Nirmal Raj.pdf";
   const fileName = "Nirmal Raj.pdf";
 
   const handleDownload = () => {
     const link = document.createElement("a");
-    link.href = fileUrl;
+    link.href = nirmal;
     link.download = fileName;
     document.body.appendChild(link);
     link.click();
