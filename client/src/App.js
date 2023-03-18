@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./App.css";
 import AutoText from "./Components/AutoText/AutoText";
+import DownloadFile from "./Components/DownloadFile/DownloadFile";
 // import Demo from "./Components/Demo/Demo";
 import Dropdown from "./Components/Dropdown/Dropdown";
 import Fetch from "./Components/Fetch/Fetch";
@@ -37,6 +38,8 @@ function App() {
         </div>
 
         <AutoText />
+
+        <DownloadFile />
 
         <form onSubmit={handleOnSubmit}>
           <input
