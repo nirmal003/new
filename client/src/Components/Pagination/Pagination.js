@@ -42,7 +42,7 @@ function Pagination() {
           </span>
         ))}
         <span
-          className={page < posts.length / 10 ? "" : "disable"}
+          className={page < data.length / 10 ? "" : "disable"}
           onClick={() => pageHandler(page + 1)}
         >
           ▶️
